@@ -1,0 +1,45 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+input CreateMenuDto {
+  category_id: String!
+  description: String!
+  image_url: String!
+  language_id: String!
+  name: String!
+  price: String!
+  restaurant_id: String!
+  status: String!
+}
+
+type Menu {
+  category_id: ID!
+  description: String!
+  image_url: String!
+  name: String!
+  price: String!
+  status: String!
+}
+
+type Mutation {
+  createMenu(CreateMenu: CreateMenuDto!): Menu!
+  removeMenu(id: ID!): Float!
+  updateMenu(UpdateMenu: UpdateMenuDto!, id: ID!): Menu!
+}
+
+type Query {
+  findAllMenu: [Menu!]!
+  findOneMenu(id: ID!): Menu!
+}
+
+input UpdateMenuDto {
+  category_id: String
+  description: String
+  image_url: String
+  language_id: String
+  name: String
+  price: String
+  restaurant_id: String
+  status: String
+}
