@@ -6,7 +6,7 @@ import { Args, ID, Mutation, Query, Resolver } from '@nestjs/graphql';
 import { Menu } from './schemas/menu.schema';
 
 @Resolver('menu')
-export class MenuResolver {
+export class  MenuResolver {
   constructor(private readonly menuService: MenuService) {}
 
   @Mutation(() => Menu)
